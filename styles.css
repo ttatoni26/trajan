@@ -21,6 +21,7 @@ body {
 a {
   transition: all 0.2s;
   color: #222;
+  text-decoration: underline;
 }
 
 a:hover {
