@@ -196,8 +196,11 @@ section {
   transition: all 0.2s;
 }
 
+.email {
+  background-color: #0072C6;
+}
+
 .btn:hover {
-  background-color: #5b76d6;
 }
 
 .btn a {
@@ -290,4 +293,9 @@ footer a:hover {
 .avatar img {
   width: 50px;
   height: 50px;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
