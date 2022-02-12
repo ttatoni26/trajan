@@ -14,10 +14,13 @@ const enableDarkMode = () => {
     link.classList.add("darkmodeLink");
   });
   localStorage.setItem("darkMode", "enabled");
+  document.getElementById("darkBtn").className = "fas fa-moon";
 };
 
 const disableDarkMode = () => {
   document.body.classList.remove("darkmode");
+  document.getElementById("darkBtn").className = "fas fa-sun";
+
   links.forEach((link, index) => {
     link.classList.remove("darkmodeLink");
   });
@@ -29,6 +32,9 @@ const darkModeToggle = document.querySelector("#darkBtn");
 
 if (darkMode === "enabled") {
   enableDarkMode();
+  document.getElementById("darkBtn").className = "fas fa-moon";
+} else {
+  document.getElementById("darkBtn").className = "fas fa-sun";
 }
 
 darkModeToggle.addEventListener("click", () => {
@@ -45,7 +51,7 @@ darkModeToggle.addEventListener("click", () => {
 // progress bar
 const progressBar = document.querySelector("#progress-bar");
 const main = document.querySelector("main");
-const nav = document.querySelector(".navbar")
+const nav = document.querySelector(".navbar");
 
 const animateProgressBar = () => {
   let scrollDistance = -main.getBoundingClientRect().top;
@@ -66,41 +72,49 @@ window.addEventListener("scroll", animateProgressBar);
 
 // animation
 var slideUp = {
-  distance: '150%',
-  origin: 'left',
+  distance: "150%",
+  origin: "left",
   opacity: null,
 };
 
-ScrollReveal().reveal('section', slideUp);
+ScrollReveal().reveal("section", slideUp);
 
 // count up animation
-function animateValue(id, start, end, duration) {    
-    var obj = document.getElementById(id);
-    var range = end - start;
-    var minTimer = 50;
-    var stepTime = Math.abs(Math.floor(duration / range));
-    
-    stepTime = Math.max(stepTime, minTimer);
-    
-    var startTime = new Date().getTime();
-    var endTime = startTime + duration;
-    var timer;
-  
-    function run() {
-        var now = new Date().getTime();
-        var remaining = Math.max((endTime - now) / duration, 0);
-        var value = Math.round(end - (remaining * range));
-        obj.innerHTML = value;
-        if (value == end) {
-            clearInterval(timer);
-        }
+function animateValue(id, start, end, duration) {
+  var obj = document.getElementById(id);
+  var range = end - start;
+  var minTimer = 50;
+  var stepTime = Math.abs(Math.floor(duration / range));
+
+  stepTime = Math.max(stepTime, minTimer);
+
+  var startTime = new Date().getTime();
+  var endTime = startTime + duration;
+  var timer;
+
+  function run() {
+    var now = new Date().getTime();
+    var remaining = Math.max((endTime - now) / duration, 0);
+    var value = Math.round(end - remaining * range);
+    obj.innerHTML = value;
+    if (value == end) {
+      clearInterval(timer);
     }
-    
-    timer = setInterval(run, stepTime);
-    run();
+  }
+
+  timer = setInterval(run, stepTime);
+  run();
 }
 
-animateValue("classes", 0, 295, 2500);
-animateValue("loc", 0, 36321, 2500)
-animateValue("modules", 0, 98, 2500)
-animateValue("cmds", 0, 13, 2500)
+$(window).scroll(function () {
+  var hT = $("#stats").offset().top,
+    hH = $("#stats").outerHeight(),
+    wH = $(window).height(),
+    wS = $(this).scrollTop();
+  if (wS > hT + hH - wH) {
+    animateValue("classes", 0, 295, 2500);
+    animateValue("loc", 0, 36321, 2500);
+    animateValue("modules", 0, 98, 2500);
+    animateValue("cmds", 0, 13, 2500);
+  }
+});
