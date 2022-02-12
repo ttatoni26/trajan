@@ -149,7 +149,6 @@ a:hover {
   .videoContainer {
     display: flex !important;
     flex-direction: column !important;
-
   }
   .videoContainer iframe {
     margin-right: 0;
@@ -197,10 +196,7 @@ section {
 }
 
 .email {
-  background-color: #0072C6;
-}
-
-.btn:hover {
+  background-color: #0072c6;
 }
 
 .btn a {
@@ -281,10 +277,10 @@ footer a:hover {
   top: 0;
   left: 0;
   height: 8px;
-  background: linear-gradient(to right, #EE82EE, #b84c4c);
+  background: linear-gradient(to right, #ee82ee, #b84c4c);
   width: 0%;
   z-index: 100;
-  transition: width .2s ease-out;
+  transition: width 0.2s ease-out;
   z-index: 101;
 }
 
@@ -296,6 +292,6 @@ footer a:hover {
 }
 
 .stats {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
