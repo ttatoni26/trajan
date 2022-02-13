@@ -13,7 +13,36 @@
     <script src="./app.js" defer></script>
     <script src="https://unpkg.com/scrollreveal"></script>
   </head>
+  <!-- Image Slider -->
+  <div class="slideshow-container">
+    <div class="mySlides fade">
+      <img src="/assets/Mainmenu.png" style="width: 100%" alt="">
+    </div>
+        <div class="mySlides fade">
+      <img src="/assets/ClickGui.png" style="width: 100%" alt="">
+    </div>
+        <div class="mySlides fade">
+      <img src="/assets/Novoline.png" style="width: 100%" alt="">
+    </div>
+        <div class="mySlides fade">
+      <img src="/assets/Theme1.png" style="width: 100%" alt="">
+    </div>
+        <div class="mySlides fade">
+      <img src="/assets/TargetHUD.png" style="width: 100%" alt="">
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  <div style="text-align:center">
+  <span class="dot" onclick="currentSlides(1)"></span>
+  <span class="dot" onclick="currentSlides(2)"></span>
+  <span class="dot" onclick="currentSlides(3)"></span>
+  <span class="dot" onclick="currentSlides(4)"></span>
+  <span class="dot" onclick="currentSlides(5)"></span>
 
+</div>
+  <!-- Image Slider End -->
   <body>
 
     <header>
@@ -34,6 +63,7 @@
           </ul>
         </div>
       </nav>
+      <!-- Image Slider -->
     </header>
     <main>
       <section data-fade-in id="info" class="info">
