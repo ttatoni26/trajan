@@ -42,6 +42,7 @@ a:hover {
   box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.3);
   transition: top 0.3s; /* Transition effect when sliding down (and up) */
   width: 100%;
+  top: 0;
 }
 
 .brand-title {
@@ -294,4 +295,91 @@ footer a:hover {
 .stats {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+/* Image  Slider */
+.mySlides {
+  display: none;
+}
+
+img {
+  vertical-align: middle;
+  height: 90vh;
+  width: 100vw;
+  object-fit: cover;
+}
+
+.slideshow-container {
+  position: relative;
+  margin: auto;
+  margin-top: 8rem;
+  margin-bottom: -8rem;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: all 0.6s;
+  border-radius: 0 3px 2px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0%;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* responsive */
+@media only screen and (max-width: 1421px) {
+  .slideshow-container {
+    display: none;
+  }
 }
