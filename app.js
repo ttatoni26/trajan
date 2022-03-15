@@ -116,7 +116,7 @@ $(window).scroll(function () {
   if (wS > hT + hH - wH && !reached) {
     reached = true
     animateValue("classes", 0, 295, 2500)
-    animateValue("loc", 0, 23290, 2500)
+    animateValue("loc", 0, 24153, 2500)
     animateValue("modules", 0, 98, 2500)
     animateValue("cmds", 0, 13, 2500)
   }
