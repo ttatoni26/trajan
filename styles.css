@@ -219,6 +219,14 @@ section {
   border: 1px solid #444;
   margin: 10px;
   padding: 10px;
+  display: flex;
+  border-radius: 0.5em;
+  padding: 20px;
+  align-items: center;
+}
+
+.card h3 {
+  margin-left: 20px;
 }
 
 main {
@@ -303,10 +311,8 @@ footer a:hover {
 }
 
 img {
-  vertical-align: middle;
-  height: 90vh;
-  width: 100vw;
-  object-fit: cover;
+  width: 100%;
+  height: auto;
 }
 
 .slideshow-container {
@@ -379,7 +385,8 @@ img {
 
 /* responsive */
 @media only screen and (max-width: 1421px) {
-  .slideshow-container {
-    display: none;
+  .slideshow-container img {
+    width: 100%;
+    height: auto;
   }
 }
