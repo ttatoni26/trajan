@@ -1,8 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 
-* {
+*, *::before, *::after {
   box-sizing: border-box;
-  scroll-behavior: smooth;
   transition: all 0.1s;
 }
 
@@ -16,6 +15,7 @@ body {
   position: relative;
   min-height: 100vh;
   overscroll-behavior-y: none;
+  line-height: 2;
 }
 
 a {
@@ -188,16 +188,16 @@ section {
 }
 
 .btn {
-  background-color: #7289da;
-  padding: 15px;
-  border-radius: 50px;
+  background-color: #5865F2;
+  padding: 1rem 1.5rem;
+  border-radius: .3rem;
   border: none;
   margin-top: 15px;
   transition: all 0.2s;
 }
 
 .email {
-  background-color: #0072c6;
+  background-color: #430297;
 }
 
 .btn a {
@@ -318,8 +318,9 @@ img {
 .slideshow-container {
   position: relative;
   margin: auto;
-  margin-top: 8rem;
   margin-bottom: -8rem;
+  margin-top: 6.5rem;
+  width: 100%;
 }
 
 .prev,
@@ -389,4 +390,13 @@ img {
     width: 100%;
     height: auto;
   }
+}
+
+.server {
+  width: 728px;
+  height: 90px;
+  max-width: 100%;
+  border: none;
+  display: block;
+  width: 100%;
 }
