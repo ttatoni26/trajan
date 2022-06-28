@@ -160,11 +160,3 @@ function showSlides(n) {
 setInterval(() => {
   plusSlides(1)
 }, 5000)
-
-$('.navbar a').click(function(e) {
-  e.preventDefault();
-  var $scrooll_to_id = $(this.getAttribute('href'));
-  $('html').stop(true).animate({
-    scrollTop: ($scrooll_to_id.position().top - $('.navbar').height())
-  });
-});
