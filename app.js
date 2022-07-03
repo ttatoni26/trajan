@@ -70,9 +70,6 @@ const animateProgressBar = () => {
 
 window.addEventListener("scroll", animateProgressBar)
 
-ScrollReveal();
-
-
 // animation
 var slideUp = {
   distance: "150%",
