@@ -70,7 +70,7 @@ const animateProgressBar = () => {
 
 window.addEventListener("scroll", animateProgressBar)
 
-ScrollReveal({ reset: true });
+ScrollReveal();
 
 
 // animation
